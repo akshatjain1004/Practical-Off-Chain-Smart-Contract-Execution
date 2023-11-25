@@ -4,42 +4,9 @@ from web3 import Web3
 w3 = Web3(Web3.WebsocketProvider('ws://localhost:8545'))
 
 # Replace with your contract's address and ABI
-contract_address = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+contract_address = "0xFD471836031dc5108809D173A067e8486B9047A3"
 contract_address= Web3.to_checksum_address(contract_address)
 contract_abi = [
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "input",
-				"type": "string"
-			}
-		],
-		"name": "processMessage",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "setRandomExecutor",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "newMessage",
-				"type": "string"
-			}
-		],
-		"name": "setString",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
@@ -179,6 +146,39 @@ contract_abi = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "input",
+				"type": "string"
+			}
+		],
+		"name": "processMessage",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "setRandomExecutor",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "newMessage",
+				"type": "string"
+			}
+		],
+		"name": "setString",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
