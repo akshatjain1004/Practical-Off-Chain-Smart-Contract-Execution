@@ -13,13 +13,35 @@ contract RandomExecutor  {
         operatorIds = ["1", "2", "3"];
         executor = operatorIds[index];
     }
+    function setRandomExecutor() public {
+        require(operatorIds.length > 0, "No operator ids available");
 
-    function setRandomExecutor() public{
-        index= index+1;
-        require(operatorIds.length > index, "No operator ids available");
-        
+        // Generate a pseudo-random number based on the current timestamp and block hash
+        // uint256 randomValue = uint256(keccak256(abi.encodePacked(block.timestamp, blockhash(block.number - 1))));
+
+
+        if (index == 0) {
+            index = 2;
+        } else if (index == 2) {
+            index = 1;
+        } else if (index == 1) {
+            index = 0;
+        } else {
+            // update the index using randomness
+            index = 2;
+        }
+
+        // // Update the executor with the operator at the new index
         executor = operatorIds[index];
     }
+
+
+    // function setRandomExecutor() public{
+    //     index= index+1;
+    //     require(operatorIds.length > index, "No operator ids available");
+        
+    //     executor = operatorIds[index];
+    // }
     function getString() public view returns (string memory) {
         return message;
     }
