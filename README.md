@@ -21,10 +21,11 @@ Remix
 3. Python- Web3
 
 ## Steps
-1. Connect your localhost to the remix platform to import the files. For this, start a connection using remixd library.
-2. Start a local blockchain testnet using the hardhat library in npm.
-3. Now deploy the solidity contract `name.sol` on the local testnet using the remix platform.
-4. Now, run the file `client.py` in a separate terminal. This is representative of the client, who interacts with the executor from the pool of operators.
-5. Finally, run the two files `operator1.py` and `operator2.py` in separate terminals representative of the pool of operators.
-6. The client can give commands to the executor, chosen from the two operators and can even change the executor.
-7. Refer to `report.pdf` for in depth analysis .
+1. cd into the folder blockchain project by command `cd blockchain_project`
+2. Connect your localhost to the remix platform to import the files. For this, start a connection using remixd library.
+3. Start a local blockchain testnet using the hardhat library in npm.
+4. Now deploy the solidity contract `name.sol` on the local testnet using the remix platform.
+5. Now, run the file `client.py` in a separate terminal. This is representative of the client, who interacts with the executor from the pool of operators.
+6. Finally, run the two files `operator1.py` and `operator2.py` in separate terminals representative of the pool of operators.
+7. The client can give commands to the executor, chosen from the two operators and can even change the executor.
+8. Refer to `report.pdf` for in depth analysis .
